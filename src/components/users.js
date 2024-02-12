@@ -15,6 +15,9 @@ export default function Users() {
     async function fetchData() {
       try {
         let { data } = await octokit.request('GET /users');
+        if(!data) {
+          return [];
+        }
         let result = [];
         for (let user of data) {
           if (user && user.login) {
