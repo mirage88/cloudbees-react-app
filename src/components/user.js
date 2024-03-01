@@ -20,6 +20,9 @@ export default function user({ user }) {
               Company: {user.company}
             </p>
             <p>
+              Location: {user.location}
+            </p>
+            <p>
               <Link to={user.organizations_url} target='_blank' rel='noreferrer'>Organizations</Link>
             </p>
             <p>
